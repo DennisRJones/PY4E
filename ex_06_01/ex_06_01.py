@@ -8,5 +8,5 @@ strNum = str[cPlace + 1:]
 num = strNum.strip()
 
 fNum = float(num)
-
+print(num)
 print(fNum)
