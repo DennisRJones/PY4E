@@ -21,3 +21,5 @@ for line in fileHandleEmail:
     if not '@uct.ac.za' in line:
         continue
         print(line)
+
+#test branching in git with save in scratch file
