@@ -1,3 +1,4 @@
+'''
 fileHandle = open('mbox-short.txt')
 count = 0
 for line in fileHandle:
@@ -40,3 +41,20 @@ for line in fhand:
     email = words[1]
     address = email.split('@')
     print(address[1])
+'''
+
+purse = {}
+purse['money'] = 12
+purse['candy'] = 3
+purse['tissues'] = 75
+purse[2] = 5
+print(purse)
+purse[2] = purse[2] + 8
+print(purse[2] - 1)
+print(purse)
+
+counts = {}
+names = ['csev', 'cwen', 'csev', 'zqian', 'cwen']
+for name in names:
+    counts[name] = counts.get(name, 0) + 1
+print(counts)
