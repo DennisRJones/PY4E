@@ -36,9 +36,23 @@ for k,v in counts.items():
 
 print('Word used most: -', maxWord, '- It is used', maxCount, 'times.')
 '''
-
+'''
 import urllib.request, urllib.parse, urllib.error
 
 hand = urllib.request.urlopen('http://www.dr-chuck.com/page1.htm')
 for line in hand:
     print(line.decode().strip())
+'''
+#get the outleading links on a page
+import urllib.request, urllib.parse, urllib.error
+from bs4 import BeautifulSoup
+
+#use http://www.dr-chuck.com/page1.htm
+url = input('Enter - ')
+html = urllib.request.urlopen(url).read()
+soup = BeautifulSoup(html, 'html.parser')
+
+#retreive all of the anchor tags
+tags = soup('a')
+for tag in tags:
+    print(tag.get('href', None))
