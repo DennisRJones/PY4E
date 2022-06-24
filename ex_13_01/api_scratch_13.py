@@ -9,7 +9,7 @@ serviceurl = 'http://maps.googleapis.com/maps/api/geocode/json?'
 while True:
     address = input('Enter location: ')
     if len(address) < 1: break
-
+    #below code doesnt work because its missing key
     url = serviceurl + urllib.parse.urlencode({'address' : 'address'})
     print('Retrieving', url)
 
@@ -94,6 +94,10 @@ while True:
 
 
 #twitter api example
+#doesnt work without importing the course code. saved seperately in a different
+#project so i dont mess up my git file... still new to this and dont want to
+#waste space and time.
+
 import urllib.request, urllib.parse, urllib.error
 import twurl
 import json
